@@ -1,0 +1,150 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    background-color: #cfcfcf;
+}
+
+.header-banner{
+    background-image: url(../img/bg-3.jpg);
+    height: 550px;
+    background-position: right center; /*vira pra DIREITA (HORIZONTAL) e CENTER (VERTICAL)*/
+    background-size: cover; /*ocupa a área INTEIRA, mesmo q esconda um pouco da imagem*/
+    border-top: 1px solid transparent; /*arrasta a imagem pra cima, pq a MARGEM da UL está se 'apoiando' nela*/
+}
+
+/*.hero-content{ --> conforme correção do exercício
+    margin: 50px auto 0;
+    width: 80%;
+    text-align: center;
+}*/
+
+.nav-banner{
+    text-align: right;
+    margin-right: 40px;
+    color: #ffffff;
+}
+
+.nav-banner li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    border-style: solid;
+    background-color: rgb(124, 122, 122, 0.7); /*0.7 quer dizer que o 'background-color' ficará com opacidade, MAS NÃO as letras q estão dentro*/
+}
+
+.nav-banner a{
+    text-decoration: none;
+    color: #ffffff;    
+    text-transform: uppercase; /*Leitor de tela lê corretamente quando há essa propriedade, pois é diferente do que colocar todas as letras lá no HTML em MAIÚSCULO. Serve pra colocar todas as letras em MAIÚSCULO*/
+    letter-spacing: 2px; /*espaçamento entre as letras das palavras*/
+    padding: 10px 18px;
+    display: block;  /*como <a href> é elemento de linha, então deve-se colocar 'display: block' pra poder mexer nela com as propriedades do BOX MODEL*/
+}
+
+.nav-banner a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*CONFORME CORREÇÃO EXERCÍCIO:
+main{
+    width: 90%;
+    margin: auto;
+    min-width:400px;
+    max-width: 860px;
+}*/
+
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    padding: 130px 80px 0;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 2px 5px 5px #000000; /*pra colocar sombra ou contorno na letra*/
+    /*text-shadow: eixo HORIZONTAL (x) --> valor POSITIVO: vai pra DIREITA, valor NEGATIVO: vai pra ESQUERDA*/
+    /*text-shadow: eixo VERTICAL (y) --> valor POSITIVO: vai pra CIMA, valor NEGATIVO: vai pra BAIXO*/
+    /*text-shadow: 3º valor referente ao esfumaçamento*/ 
+}
+
+/*<!--teria sido melhor e menos trabalhoso ter feito uma <div> (ela apenas 'divide' e facilita na formatação de padding, p. ex., porém, NÃO é semântica) pra colocar o h1 e o h3 pra formatá-los no CSS*/
+/*NÃO ficou responsivo, pois devia ser uma <div> pra facilitar a edição no CSS*/
+.banner-carreira{
+    text-align: center;
+    background-color: rgba(27, 26, 26, 0.6); /*rgba: recebe 4 números, sendo o último referente à TRANSPARÊNCIA q se quer colocar no item*/
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-bottom: solid 2px #ffffff;
+/*OS comandos abaixo, fazem com q o elemento fique responsivo com a pg*/  
+    display: block; /*BLOCK, pra NÃO se comportar como elemento de LINHA, se NÃO ele quebra*/
+    margin: auto; /*margin: auto --> pra ficar centralizado o elemento*/
+    width: fit-content; /*fit-content: ajusta a largura do conteúdo do elemento OU colocar a largura q quer q o elemento tenha*/
+}  
+
+.div-container{
+    margin: 10px 180px 20px 180px;
+}
+
+article{
+    background-color: #ffffff;
+    margin-bottom: 32px; /*espaçamento entre um <article> e outro*/
+    padding: 1px 15px;
+    text-align: justify;
+}
+
+.header-h2{
+    background-color: #e6e2e2;
+}
+
+h2{
+    text-transform: uppercase;
+    padding: 5px 0 5px 8px;
+    border-bottom: solid 2px rgb(0, 0, 0, 0.2);
+}
+
+#h2-minusculo{
+    text-transform: capitalize; /*neste a regra é que somente a letra 'J' ficará MAIÚSCULA*/
+}
+
+
+.nav-saiba-mais ul{
+    display: inline-block;
+    padding: 0; /*pra puxar pra esquerda o botão 'saiba mais'*/
+    margin-top: 0; /*pra puxar pra cima e deixa mais próximo ao texto o botão 'saiba mais'*/
+}
+
+.nav-saiba-mais ul li{
+    list-style-type: none;
+    display: inline-block;   
+    padding: 8px 14px;
+    background-color: rgba(199, 191, 191, 0.7); /*0.7 quer dizer que o 'background-color' ficará com opacidade, MAS NÃO as letras q estão dentro*/
+    border-radius: 5px;
+}
+
+.a-saiba-mais{
+    text-decoration: underline;
+    color: #090de2; 
+    font-weight: bold;
+}
+
+footer{
+    background-color: rgba(61, 60, 60, 0.6);
+    text-align: center;
+    color: #e6e4e4;
+    text-shadow: 2px 5px 5px #000000;
+    padding: 20px 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/*OBS.: DIFERENÇAS RELEVANTES:
+a.botao{...}: a classe '.botao' está aplicada no PRÓPRIO elemento 'a' --> vai mexer na classe 'a' q possui o elemento .'botao'
+a .botao{...}: '.botao' é DESCENDENTE de 'a'
+*/
+
+/*PRA COLOCAR UM BOTÃO NA DIREÇÃO OPOSTA DA Q ELE ESTÁ:
+margin-left: auto; ---> auto: é o espaço que sobra. Margin-left: o local onde o espaço q sobra irá ficar
+Elemento (botão) precisa estar com 'display: block', pois o comando só funciona em elementos de BLOCO*/

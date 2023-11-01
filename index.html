@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bianca Fonseca">
+    <meta name="keywords" content="html5, css3, tecnologia">
+    <title>Projeto HMTL e CSS</title>
+    <link rel="stylesheet" href="style/style.css"> 
+</head>
+<body>
+    <header class="header-banner">
+        <nav class="nav-banner">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Cursos</a></li>
+            </ul>
+        </nav>
+        <!--teria sido melhor e menos trabalhoso ter feito uma <div> (ela apenas 'divide' e facilita na formatação de padding, p. ex., porém, NÃO é semântica) pra colocar o h1 e o h3 pra formatá-los no CSS-->
+        <h1>Cursos Serfrontend</h1>    
+        <p class="banner-carreira">Tudo o que precisa saber para iniciar na carreira</p>
+    </header>
+    <main> <!--nela vai o conteúdo principal. 1 por página. 'filha' da <body>-->
+        <div class="div-container"> <!--pra formatar os espaçamentos, se NÃO tivesse sido usada, poderia ter sido removida-->
+            <section> <!--pra agrupar os 3 <article>-->
+                <article>
+                    <header class="header-h2">
+                        <h2>O html</h2>
+                    </header>
+                        <p>HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (JavaScript) de uma página da web.</p>
+                            <nav class="nav-saiba-mais"> <!--aqui pode ser somente a <a href> NÃO precisa ser a <nav>, pois só 1 link clicável-->
+                                <ul>
+                                    <li><a href="#" class="a-saiba-mais">Saiba mais</a></li>
+                                </ul>
+                            </nav>
+                </article>
+                <article>
+                    <header class="header-h2">
+                        <h2>O css</h2>
+                    </header>
+                        <p>CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é uma linguagem de estilo (en-US) usada para descrever a apresentação de um documento escrito em HTML ou em XML (incluindo várias linguagens em XML como SVG, MathML ou XHTML). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.</p>
+                            <nav class="nav-saiba-mais">
+                                <ul>
+                                    <li><a href="#" class="a-saiba-mais">Saiba mais</a></li>
+                                </ul>
+                            </nav>
+                </article>
+                <article>
+                    <header class="header-h2">
+                        <h2 id="h2-minusculo">O javascript</h2>
+                    </header>
+                        <p>JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js, Apache CouchDB e Adobe Acrobat. O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional). Saiba mais sobre o JavaScript.</p>
+                            <nav class="nav-saiba-mais">
+                                <ul>
+                                    <li><a href="#" class="a-saiba-mais">Saiba mais</a></li>
+                            </ul>
+                        </nav>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; 2023
+    </footer>
+</body>
+</html>
+        
